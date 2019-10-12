@@ -1,41 +1,46 @@
 import React, { useState } from 'react';
-import { Menu, Button, MenuItem } from '@material-ui/core';
 
 
 export const Dropdown = () => {
-    
-    const [showDropdown, setShowDropdown] = useState(false);
 
-    const handleClose = () => {
-        setShowDropdown(!showDropdown);
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
     }
+    window.onclick = (event) => {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
  
-    return (
-        <div className="dropDown">
-            <Button aria-controls="simple-menu" onClick={(handleClose)} aria-haspopup="true" size='medium'>
-            theres a menu here POGCHAMP
-                <Menu 
-                    showDropdown={showDropdown} 
-                    keepMounted 
-                    open={Boolean(showDropdown)} 
-                    onClose={handleClose}
-                >
-                    <MenuItem onClick={handleClose}> Aquarius </MenuItem>
-                    <MenuItem onClick={handleClose}> Pisces </MenuItem>
-                    <MenuItem onClick={handleClose}> Aries </MenuItem>
-                    <MenuItem onClick={handleClose}> Taurus </MenuItem>
-                    <MenuItem onClick={handleClose}> Gemini </MenuItem>
-                    <MenuItem onClick={handleClose}> Cancer </MenuItem>
-                    <MenuItem onClick={handleClose}> Leo </MenuItem>
-                    <MenuItem onClick={handleClose}> Virgo </MenuItem>
-                    <MenuItem onClick={handleClose}> Libra </MenuItem>
-                    <MenuItem onClick={handleClose}> Scorpio </MenuItem>
-                    <MenuItem onClick={handleClose}> Sagittarius </MenuItem>
-                    <MenuItem onClick={handleClose}> Capricorn </MenuItem>
-
-                </Menu>
-            </Button>
-                       
+    return (    
+        <div>
+            <h1 class="font-effect-fire-animation">Florida Man</h1>
+            <div className="dropdown">
+                <button onClick={(myFunction)} class="dropbtn">Signs</button>
+                
+                <div id="myDropdown" class="dropdown-content">
+                    <p onClick={(myFunction)}>Aquarius</p>
+                    <p onClick={(myFunction)}>Pisces</p>
+                    <p onClick={(myFunction)}>Aries</p>
+                    <p onClick={(myFunction)}>Taurus</p>
+                    <p onClick={(myFunction)}>Gemini</p>
+                    <p onClick={(myFunction)}>Cancer</p>
+                    <p onClick={(myFunction)}>Leo</p>
+                    <p onClick={(myFunction)}>Virgo</p>
+                    <p onClick={(myFunction)}>Libra</p>
+                    <p onClick={(myFunction)}>Scorpio</p>
+                    <p onClick={(myFunction)}>Sagittarius</p>
+                    <p onClick={(myFunction)}>Capricorn</p>
+                </div>
+            </div> 
         </div>
     );
 }
+
