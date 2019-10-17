@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 
 export const Dropdown = () => {
 
@@ -18,10 +17,12 @@ export const Dropdown = () => {
           }
         }
       }
+	
+	 
  
     return (    
         <div>
-            <div className="dropdown" style={{padding: '20px', position: 'relative'}}>
+            <div className="dropdown" style={{padding: '20px'}}>
                 <button onClick={(myFunction)} className="dropbtn">Signs</button>
                 
                 <div id="myDropdown" className="dropdown-content">
