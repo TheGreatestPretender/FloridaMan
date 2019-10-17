@@ -6,8 +6,13 @@ function App() {
 
   return (
     <div className="App">
-      <Dropdown />
 
+      <h1 className="font-effect-fire-animation">Florida Man</h1>
+
+        <div className="parent_container">
+          <Dropdown />
+
+        </div>
     </div>
   );
 }

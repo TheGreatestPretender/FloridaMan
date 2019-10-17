@@ -21,11 +21,10 @@ export const Dropdown = () => {
  
     return (    
         <div>
-            <h1 class="font-effect-fire-animation">Florida Man</h1>
-            <div className="dropdown">
-                <button onClick={(myFunction)} class="dropbtn">Signs</button>
+            <div className="dropdown" style={{padding: '20px', position: 'relative'}}>
+                <button onClick={(myFunction)} className="dropbtn">Signs</button>
                 
-                <div id="myDropdown" class="dropdown-content">
+                <div id="myDropdown" className="dropdown-content">
                     <p onClick={(myFunction)}>Aquarius</p>
                     <p onClick={(myFunction)}>Pisces</p>
                     <p onClick={(myFunction)}>Aries</p>

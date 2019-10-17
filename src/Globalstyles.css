@@ -12,51 +12,45 @@ h1 {
     font-weight: 200;
     font-size: 100px;
 }
-span.MuiButton-label {
-    background-color: #4287f5 !important;
-    border-radius: 400px;
-    padding: 10px;
-    font-family: "Comic Sans MS";
-    font-weight: 'bold';
-    font-size: 100px
-} 
 
-/* Dropdown Button */
+.parent_container{
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  height: 100px;
+}
+
 .dropbtn {
     background-color: #3498DB;
     color: white;
+    display: flex;
+    justify-content: center;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    flex-direction: column;
   }
   
-  /* Dropdown button on hover & focus */
   .dropbtn:hover, .dropbtn:focus {
     background-color: #2980B9;
   }
   
-  /* The container <div> - needed to position the dropdown content */
   .dropdown {
-    position: absolute;
+    display: flex;
     transition: .5s ease;
-    top: 35%;
-    right: 30%;
-    left: 50%;
-    display: inline-block;
   }
   
-  /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
-    position: absolute;
+    position: relative;
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
   
-  /* Links inside the dropdown */
   .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -64,8 +58,7 @@ span.MuiButton-label {
     display: block;
   }
   
-  /* Change color of dropdown links on hover */
+  
   .dropdown-content a:hover {background-color: #ddd}
   
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
